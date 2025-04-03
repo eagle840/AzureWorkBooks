@@ -1,0 +1,26 @@
+{
+  "version": "Notebook/1.0",
+  "items": [
+    {
+      "type": 1,
+      "content": {
+        "json": "Using the JSONPath\r\n\r\nhttps://learn.microsoft.com/en-us/azure/azure-monitor/visualize/workbooks-jsonpath"
+      },
+      "name": "text - 0"
+    },
+    {
+      "type": 3,
+      "content": {
+        "version": "KqlItem/1.0",
+        "query": "{\"version\":\"1.0.0\",\"content\":\"{ \\\"store\\\": {\\r\\n    \\\"books\\\": [ \\r\\n      { \\\"category\\\": \\\"reference\\\",\\r\\n        \\\"author\\\": \\\"Nigel Rees\\\",\\r\\n        \\\"title\\\": \\\"Sayings of the Century\\\",\\r\\n        \\\"price\\\": 8.95\\r\\n      },\\r\\n      { \\\"category\\\": \\\"fiction\\\",\\r\\n        \\\"author\\\": \\\"Evelyn Waugh\\\",\\r\\n        \\\"title\\\": \\\"Sword of Honour\\\",\\r\\n        \\\"price\\\": 12.99\\r\\n      },\\r\\n      { \\\"category\\\": \\\"fiction\\\",\\r\\n        \\\"author\\\": \\\"Herman Melville\\\",\\r\\n        \\\"title\\\": \\\"Moby Dick\\\",\\r\\n        \\\"isbn\\\": \\\"0-553-21311-3\\\",\\r\\n        \\\"price\\\": 8.99\\r\\n      },\\r\\n      { \\\"category\\\": \\\"fiction\\\",\\r\\n        \\\"author\\\": \\\"J. R. R. Tolkien\\\",\\r\\n        \\\"title\\\": \\\"The Lord of the Rings\\\",\\r\\n        \\\"isbn\\\": \\\"0-395-19395-8\\\",\\r\\n        \\\"price\\\": 22.99\\r\\n      }\\r\\n    ],\\r\\n    \\\"bicycle\\\": {\\r\\n      \\\"color\\\": \\\"red\\\",\\r\\n      \\\"price\\\": 19.95\\r\\n    }\\r\\n  }\\r\\n}\",\"transformers\":[{\"type\":\"jsonpath\",\"settings\":{\"tablePath\":\"$.store.books\",\"columns\":[{\"path\":\"$.title\",\"columnid\":\"Title\"},{\"path\":\"$.author\",\"columnid\":\"Author\"},{\"path\":\"$.price\",\"columnid\":\"Price\"}]}}]}",
+        "size": 0,
+        "queryType": 8
+      },
+      "name": "query - 1"
+    }
+  ],
+  "fallbackResourceIds": [
+    "Azure Monitor"
+  ],
+  "$schema": "https://github.com/Microsoft/Application-Insights-Workbooks/blob/master/schema/workbook.json"
+}
