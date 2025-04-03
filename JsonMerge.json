@@ -1,0 +1,46 @@
+{
+  "version": "Notebook/1.0",
+  "items": [
+    {
+      "type": 1,
+      "content": {
+        "json": "# Setting up AAD AuthN/Z for Logic App\r\n\r\nFollowing : 126 - Securing Azure Logic App HTTP Triggers with Azure AD [link](https://www.youtube.com/watch?v=Z0uM1PXnPq0)\r\n\r\n\r\n1) Create basic http logic App   \r\n2) Create Client App Reg   \r\n3) Create Server App Reg   \r\n4) Set Logic App AuthN  \r\n5) Test  \r\n6) Add other  "
+      },
+      "name": "text - 0"
+    },
+    {
+      "type": 3,
+      "content": {
+        "version": "KqlItem/1.0",
+        "query": "{\"version\":\"1.0.0\",\"content\":\"[\\r\\n  {\\r\\n    \\\"id\\\": 1,\\r\\n    \\\"name\\\": \\\"John Doe\\\",\\r\\n    \\\"age\\\": 30,\\r\\n    \\\"city\\\": \\\"New York\\\"\\r\\n  },\\r\\n  {\\r\\n    \\\"id\\\": 2,\\r\\n    \\\"name\\\": \\\"Jane Smith\\\",\\r\\n    \\\"age\\\": 25,\\r\\n    \\\"city\\\": \\\"Los Angeles\\\"\\r\\n  },\\r\\n  {\\r\\n    \\\"id\\\": 3,\\r\\n    \\\"name\\\": \\\"Mike Johnson\\\",\\r\\n    \\\"age\\\": 35,\\r\\n    \\\"city\\\": \\\"Chicago\\\"\\r\\n  }\\r\\n]\",\"transformers\":null}",
+        "size": 0,
+        "queryType": 8
+      },
+      "name": "query - 1"
+    },
+    {
+      "type": 3,
+      "content": {
+        "version": "KqlItem/1.0",
+        "query": "{\"version\":\"1.0.0\",\"content\":\"[\\r\\n  {\\r\\n    \\\"id\\\": 1,\\r\\n    \\\"occupation\\\": \\\"Software Engineer\\\",\\r\\n    \\\"salary\\\": 100000\\r\\n  },\\r\\n  {\\r\\n    \\\"id\\\": 2,\\r\\n    \\\"occupation\\\": \\\"Data Analyst\\\",\\r\\n    \\\"salary\\\": 80000\\r\\n  },\\r\\n  {\\r\\n    \\\"id\\\": 3,\\r\\n    \\\"occupation\\\": \\\"Project Manager\\\",\\r\\n    \\\"salary\\\": 120000\\r\\n  }\\r\\n]\",\"transformers\":null}",
+        "size": 0,
+        "queryType": 8
+      },
+      "name": "query - 3"
+    },
+    {
+      "type": 3,
+      "content": {
+        "version": "KqlItem/1.0",
+        "query": "{\"version\":\"Merge/1.0\",\"merges\":[{\"id\":\"1e4030ce-08a4-4973-876e-38291e42c01f\",\"mergeType\":\"innerunique\",\"leftTable\":\"query - 1\",\"rightTable\":\"query - 3\",\"leftColumn\":\"id\",\"rightColumn\":\"id\"}],\"projectRename\":[{\"originalName\":\"[query - 1].id\",\"mergedName\":\"id\",\"fromId\":\"1e4030ce-08a4-4973-876e-38291e42c01f\"},{\"originalName\":\"[query - 1].name\",\"mergedName\":\"name\",\"fromId\":\"1e4030ce-08a4-4973-876e-38291e42c01f\"},{\"originalName\":\"[query - 1].age\",\"mergedName\":\"age\",\"fromId\":\"1e4030ce-08a4-4973-876e-38291e42c01f\"},{\"originalName\":\"[query - 1].city\",\"mergedName\":\"city\",\"fromId\":\"1e4030ce-08a4-4973-876e-38291e42c01f\"},{\"originalName\":\"[query - 3].id\",\"mergedName\":\"id1\",\"fromId\":\"1e4030ce-08a4-4973-876e-38291e42c01f\"},{\"originalName\":\"[query - 3].occupation\",\"mergedName\":\"occupation\",\"fromId\":\"1e4030ce-08a4-4973-876e-38291e42c01f\"},{\"originalName\":\"[query - 3].salary\",\"mergedName\":\"salary\",\"fromId\":\"1e4030ce-08a4-4973-876e-38291e42c01f\"}]}",
+        "size": 0,
+        "queryType": 7
+      },
+      "name": "query - 4"
+    }
+  ],
+  "fallbackResourceIds": [
+    "azure monitor"
+  ],
+  "$schema": "https://github.com/Microsoft/Application-Insights-Workbooks/blob/master/schema/workbook.json"
+}
